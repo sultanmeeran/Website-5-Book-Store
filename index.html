@@ -122,7 +122,7 @@
 
     <!--------------------Best Sellers------------------------>
     <section class="best-sellers">
-        <div class="bestseller-heading">
+            <div class="bestseller-heading">
             <h4>Bestsellers</h4>
         </div>
         <div class="bestseller-cards">
@@ -178,9 +178,66 @@
 
 
         </div>
+        <!-- =============================================== -->
+          <!-- New 5 cards -->
+    <div class="extra-cards" id="extraCards">
+
+        <div class="card">
+            <img src="./assets/images/best seller 1.PNG" alt="">
+            <h4>Book Title 6</h4>
+            <p>by Author 6</p>
+            <div class="main-btn">
+                <span class="price-btn">$15.00</span>
+                <span class="add-btn">+<i class="fa-solid fa-basket-shopping"></i></span>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="./assets/images/best seller 2.PNG" alt="">
+            <h4>Book Title 7</h4>
+            <p>by Author 7</p>
+            <div class="main-btn">
+                <span class="price-btn">$16.00</span>
+                <span class="add-btn">+<i class="fa-solid fa-basket-shopping"></i></span>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="./assets/images/best seller 3.PNG" alt="">
+            <h4>Book Title 8</h4>
+            <p>by Author 8</p>
+            <div class="main-btn">
+                <span class="price-btn">$18.00</span>
+                <span class="add-btn">+<i class="fa-solid fa-basket-shopping"></i></span>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="./assets/images/best seller 4.PNG" alt="">
+            <h4>Book Title 9</h4>
+            <p>by Author 9</p>
+            <div class="main-btn">
+                <span class="price-btn">$20.00</span>
+                <span class="add-btn">+<i class="fa-solid fa-basket-shopping"></i></span>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="./assets/images/best seller 5.PNG" alt="">
+            <h4>Book Title 10</h4>
+            <p>by Author 10</p>
+            <div class="main-btn">
+                <span class="price-btn">$22.00</span>
+                <span class="add-btn">+<i class="fa-solid fa-basket-shopping"></i></span>
+            </div>
+        </div>
+
+    </div>
+
+         <!-- ===================================================== -->
         <div class="bestseller-button">
             <div class="btn">
-                <a href="#">VIEW MORE</a>
+                <a href="#" id="showBtn">VIEW MORE</a>
             </div>
         </div>
     </section>
@@ -434,6 +491,20 @@
             </div>
         </div>
     </section>
+
+    <script>
+        document.getElementById("showBtn").addEventListener("click", function () {
+    let cards = document.querySelector(".extra-cards");
+
+    if (cards.style.display === "none" || cards.style.display === "") {
+        cards.style.display = "flex";
+        this.innerText = "Show Less";
+    } else {
+        cards.style.display = "none";
+        this.innerText = "Show More";
+    }
+});
+    </script>
 </body>
 
 </html>
