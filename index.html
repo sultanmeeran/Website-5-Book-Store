@@ -80,8 +80,12 @@
         </div>
         <div class="hero-p2">
             <p><span>Hezy Theme:</span> What We Can All Do to Save America's Future</p>
+
+                    <p id="moreText" style="display: none;">
+            Here is some additional information about this book and its story.
+        </p>
             <div class="btn">
-                <a href="#">VIEW MORE</a>
+                <a href="#" id="heroViewMore">VIEW MORE</a>
             </div>
         </div>
     </section>
@@ -308,7 +312,11 @@
                         chillwave. Irony fingerstache thundercats.</p>
                     <img src="./assets/images/feature1.PNG" alt="">
                 </div>
-                <a href="#">FIND OUT MORE →</a>
+                                               <p class="more-text" id="more1">
+                    This is the additional information for feature one.
+                    You can write your complete description here.
+                </p>
+                <a href="#" class="findMore" data-target="more1">FIND OUT MORE →</a>
             </div>
 
             <div class="feature">
@@ -319,7 +327,11 @@
                         neque sed ipsum.</p>
                     <img src="./assets/images/feature2.PNG" alt="">
                 </div>
-                <a href="#">FIND OUT MORE →</a>
+                                                 <p class="more-text" id="more2">
+                    This is the additional information for feature one.
+                    You can write your complete description here.
+                </p>
+                <a href="#" class="findMore" data-target="more2">FIND OUT MORE →</a>
             </div>
         </div>
 
@@ -333,7 +345,11 @@
                         chillwave. Irony fingerstache thundercats.</p>
                     <img src="./assets/images/feature3.PNG" alt="">
                 </div>
-                <a href="#">FIND OUT MORE →</a>
+                                                 <p class="more-text" id="more3">
+                    This is the additional information for feature one.
+                    You can write your complete description here.
+                </p>
+                <a href="#" class="findMore" data-target="more3">FIND OUT MORE →</a>
             </div>
             <div class="feature">
                 <h3>Donec pede justo</h3>
@@ -343,7 +359,11 @@
                         neque sed ipsum.</p>
                     <img src="./assets/images/feature4.PNG" alt="">
                 </div>
-                <a href="#">FIND OUT MORE →</a>
+                                                 <p class="more-text" id="more4">
+                    This is the additional information for feature one.
+                    You can write your complete description here.
+                </p>
+                <a href="#" class="findMore" data-target="more4">FIND OUT MORE →</a>
             </div>
         </div>
 
@@ -492,7 +512,54 @@
         </div>
     </section>
 
-    <script>
+   <script>
+
+const buttons = document.querySelectorAll(".findMore");
+
+buttons.forEach(function(button) {
+
+    button.addEventListener("click", function(e) {
+
+        e.preventDefault();
+
+        let targetId = this.getAttribute("data-target");
+        let text = document.getElementById(targetId);
+
+        if (text.style.display === "none" || text.style.display === "") {
+
+            text.style.display = "block";
+            this.innerHTML = "FIND OUT LESS ←";
+
+        } else {
+
+            text.style.display = "none";
+            this.innerHTML = "FIND OUT MORE →";
+
+        }
+
+    });
+
+});
+
+
+
+document.getElementById("heroViewMore").addEventListener("click", function(e) {
+
+    e.preventDefault();
+
+    let text = document.getElementById("moreText");
+
+    if (text.style.display === "none" || text.style.display === "") {
+        text.style.display = "block";
+        this.innerText = "VIEW LESS";
+    } else {
+        text.style.display = "none";
+        this.innerText = "VIEW MORE";
+    }
+
+});
+
+      
         document.getElementById("showBtn").addEventListener("click", function () {
     let cards = document.querySelector(".extra-cards");
 

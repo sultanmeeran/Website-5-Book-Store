@@ -417,6 +417,11 @@ body {
 }
 
 /*-------------------------Features------------------*/
+.more-text {
+    display: none;
+      width: 55%;
+    text-align: left;
+}
 .features {
     padding: 60px 60px;
     display: flex;
