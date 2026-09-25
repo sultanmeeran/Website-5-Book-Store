@@ -722,3 +722,74 @@ hr {
     justify-content: space-around;
     gap: 40px;
 }
+/* ==============about us ====================== */
+body{
+        background-color: #010100;
+        color: #E1E1DF;
+}
+.About{
+    display: block;
+}
+.About ul {
+    padding: 0px 580px;
+}
+.About li {
+    margin-bottom: 20px;
+}
+.About h1 {
+    text-align: center;
+    margin: 32px;
+}
+.About .card{
+     padding: 0px 382px;
+}
+.About .card-body{
+    border: 1px solid  #E1E1DF;
+    padding: 50px;
+
+}
+.About{
+    display: flex ;
+}
+
+.new {
+    width: 760px;
+    margin-left: 275px;
+    margin-bottom: 50px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+        animation: jello-horizontal 0.9s both;
+}
+
+
+
+@keyframes jello-horizontal {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
